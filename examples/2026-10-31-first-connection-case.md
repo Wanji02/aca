@@ -38,9 +38,11 @@ The Python read client successfully read generation 1, rejected a response for t
 
 This checks the small client's behavior and demonstrates the reuse procedure. It does not show that an independent AI autonomously diagnosed or restarted an unknown service, or that a real remote platform recovered.
 
-## Existing device probe: unresolved
+## Existing device probe: unavailable environment
 
 Using the [pywizlight project's documented read operation](https://github.com/sbidy/pywizlight#example-udp-requests), the assistant sent one `getPilot` query to the previously known lamp address. No matching response arrived within three seconds. The address may be stale, or the device or route may be unavailable; this probe does not establish the cause.
+
+After the probe, the owner confirmed that the computer was not currently connected to the smart devices. Physical acceptance is therefore deferred until the device environment is available. The timeout is not counted as a device-integration defect, and no further device probes are needed in the current environment.
 
 No discovery scan, pairing, light-state change, or production-service restart was performed. Device identity and current connectivity remain unverified. This was an existing device with prior context, not an unknown-device test.
 
@@ -48,7 +50,7 @@ No discovery scan, pairing, light-state change, or production-service restart wa
 
 - Reusing a suitable existing tool recovered the network read after the first route failed; no new connector framework was needed.
 - The working invocation could be reused from a fresh process. The synthetic check also distinguished fresh results, a stopped service, and wrong-target data.
-- Device reachability remains a concrete next task. A historical address is not evidence of a current connection.
+- Physical acceptance remains a next task once the device environment is available. A historical address is not evidence of a current connection.
 - No changes to the common workflow were justified by this small case alone. The next stronger evaluation needs a fresh agent, a less familiar target, and comparable conditions with and without ACA.
 
 There were no platform writes, messages, physical device changes, or changes to the user's production AI services. Experimental clients and raw local evidence remain outside the ACA distribution. This report is not a universal compatibility claim.

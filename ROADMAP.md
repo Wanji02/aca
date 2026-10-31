@@ -8,6 +8,8 @@
 
 The [design direction](DESIGN.md) keeps these choices explicit. The [first case report](examples/2026-10-31-first-connection-case.md) records a real public API read and process reuse, a separate synthetic recovery exercise, and physical acceptance deferred because the device environment was unavailable. It is not an independent-agent or cross-model evaluation.
 
+The [Bluesky case](examples/2026-10-31-bluesky-public-feed.md) adds real public social-feed reads, cursor reuse across processes, identity mismatch handling, and recovery from an invalid cursor using preserved state. Authenticated social actions and comparative agent evaluations remain open.
+
 ## Next: demonstrate the method
 
 1. Give an agent a real network or device goal without a hidden, prewritten target adapter. Observe how it discovers and establishes a route.

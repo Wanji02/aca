@@ -1,5 +1,10 @@
 # Changelog
 
+## Public social read case - 2026-10-31
+
+- Record Bluesky public identity/profile/feed discovery, pagination reuse, and recovery using preserved valid state after an invalid cursor.
+- Six recorded runs: three successful reads and three reported failures. No authenticated social writes, device probes, new core dependencies, or changes to SKILL.md.
+
 ## Design and first case - 2026-10-31
 
 - Record the method-first design direction and explicit non-goals in DESIGN.md.

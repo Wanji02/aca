@@ -4,6 +4,8 @@ These are proposed exercises, not completed integrations or a compatibility list
 
 Recorded work: [first connection case](2026-10-31-first-connection-case.md). Keep its limited observations separate from the broader exercises below.
 
+Additional case: [Bluesky public feed and cursor reuse](2026-10-31-bluesky-public-feed.md), including actual API failures and preservation of a usable connection.
+
 ## Network connection
 
 Ask an agent to connect an account on a chosen platform and retrieve one item the user is permitted to access. Let it discover a suitable interface rather than giving it a hidden target-specific script.

@@ -1,9 +1,9 @@
 ---
 name: aca-connect
-description: Connect an existing AI to apps, accounts, APIs, and smart devices for ongoing messages, actions, and replies. Use to establish, maintain, resume, or repair these connections.
+description: Connect an existing AI to apps, accounts, APIs, and smart devices for ongoing interaction and delegated autonomous exploration. Use to establish, maintain, resume, or repair these connections.
 license: MIT
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # ACA Connect
@@ -33,6 +33,16 @@ If the host cannot receive or schedule work while idle, identify and implement a
 Give the same agent the incoming request and relevant context. Let it select and combine available tools: a message can lead to conversation, an authorized file delivery, or a device action. Keep tool execution results available when composing the reply; do not turn keywords into a separate personality or fixed response engine.
 
 Route replies and attachments to the intended account and conversation. Use the host's existing authorization and the user's delegation; clarify only ambiguities that affect the actual target or action. A success reply follows the observed result. If delivery is uncertain, inspect the outcome before resending an action that could duplicate an effect.
+
+## Support initiative when requested
+
+Use the same agent to explore content and discussions, form reactions, and choose whether to like, save, comment, share, message, or continue browsing. Map these intentions to the platform's actual capabilities; unavailable actions remain unavailable. Understand the content actually observed rather than inferring a whole video from its title.
+
+Establish the user's delegated actions, audiences, and operating scope, then let the agent decide within them without repeated approvals. Reuse the host's scheduling and resource controls. Yield background exploration to incoming conversation; pausing exploration should not disable user-requested tasks or message reception. Do not turn available background time into a quota for posts or messages.
+
+Retain meaningful discoveries, reactions, and revisable interests through the existing memory. Distinguish the agent's interests from the user's preferences and shared experiences. Feedback about a work, the timing of a share, and the way it was phrased can mean different things. Let interests change and allow new discoveries beyond existing preferences; do not install a fixed persona or a separate interest database by default.
+
+Keep private conversation context out of public comments. Preserve the target, outcome, and source of interactions so later conversation can refer to what actually happened without inventing shared experiences.
 
 ## Continue and resume
 

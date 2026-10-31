@@ -10,6 +10,16 @@ The product outcome is that the user can reach the same AI through an assigned a
 
 The account remains under the user's control. Assigning it to the AI means binding an authorized session and its incoming/outgoing interactions to that agent, not transferring ownership or granting every correspondent access to the user's computer.
 
+## Initiative and developing interests
+
+Connection supports both responses to users and exploration initiated by the same AI. Within the user's delegation, it can browse feeds and videos, read discussions, form a view, and choose to like, save, comment, share, send a message, or leave something alone. These are general intentions; their concrete actions depend on the connected platform.
+
+The agent's existing identity and memory determine its reactions and retain meaningful experiences. Distinguish its emerging interests, the user's preferences, and their shared history. Interests can be expressed on first discovery and revised later; repeated meaningful experience may make them more stable. Disagreement and curiosity are possible without forced opposition or copying every user preference.
+
+ACA makes this behavior possible through observation, action, continuity, and an optional background opportunity to act. It does not promise subjective consciousness or manufacture a personality with preset hobbies. The user delegates a scope once and can revise it; ordinary choices within that scope belong to the agent. Timing and resource controls support operation, not compulsory sharing or engagement targets.
+
+Existing social plugins, such as [Aurabot](https://github.com/accomplish07zrh-eng/dsh-aurabot-qq), can inform these mechanisms. Reuse useful parts without inheriting their separate agent sessions, fixed persona, memory store, or platform-specific assumptions. Our deployment is a source of design experience, not the default identity for everyone who uses ACA.
+
 ## One agent, many connections
 
 Keep the existing identity, conversation, memory, and decision maker. Incoming messages and device events reach that agent. It interprets the request and chooses tools, and the result returns to the appropriate conversation or endpoint.

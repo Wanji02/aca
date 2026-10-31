@@ -8,6 +8,10 @@ ACA provides the self-contained [Connect workflow](SKILL.md) and [design directi
 
 Connect a user-assigned account to the existing agent. New messages should reach it after setup ends, retain the right conversation and sender, and produce replies through the same account. Reuse existing host and connector capabilities before building anything new.
 
+## Support delegated initiative
+
+Alongside incoming conversation, let the same agent use available background time to explore content and discussions, choose interactions, and share discoveries. Carry meaningful experiences and changing interests through its existing memory. Reuse useful mechanisms from existing social plugins without imposing their personality or a second agent. Incoming user requests take priority; activity and message counts are not the goal.
+
 ## Then: connect requests to actions
 
 Let the same agent handle a phone message that asks for a particular computer file, a camera observation, or a device action, and return the result to the intended conversation. Establish the caller's authority and the requested target through the existing host and user delegation.

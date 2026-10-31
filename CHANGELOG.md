@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1 - 2026-10-31
+
+- Include delegated exploration, discussion, likes, saves, comments, sharing, and proactive messages in the network-layer interaction model.
+- Keep initiative and evolving interests with the user's existing agent and memory; avoid a fixed persona, hobby list, or engagement quota.
+- Preserve continuous reception as the implementation priority. These are workflow updates, not activation of new platform actions.
+
 ## 0.3.0 - 2026-10-31
 
 - Define connected accounts as ongoing interaction channels for the user's existing AI.

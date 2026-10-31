@@ -2,7 +2,7 @@
 
 Read [the design direction](DESIGN.md) before changing scope or architecture.
 
-Help a user's AI remain reachable through connected accounts and devices. Useful contributions improve discovery, ongoing reception, source identity, action delivery, responses, or recovery without requiring another agent or a platform-specific framework.
+Help a user's AI remain reachable and participate through connected accounts and devices. Useful contributions improve discovery, ongoing reception, autonomous exploration, interest continuity, source identity, action delivery, responses, or recovery without requiring another agent or a platform-specific framework.
 
 Keep public content in English and [SKILL.md](SKILL.md) usable on its own. Explain the real problem a change solves and why existing tools do not already solve it. Preserve attribution and licenses when reusing work.
 

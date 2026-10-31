@@ -8,6 +8,8 @@ Additional case: [Bluesky public feed and cursor reuse](2026-10-31-bluesky-publi
 
 ## Network connection
 
+Recorded fresh-context case: [Hacker News discovery and handoff](2026-10-31-fresh-agent-handoff.md). One agent discovered a route from the goal; a second reused its saved connection. This tests same-host context handoff, not cross-model compatibility.
+
 Recorded browser case: [Playwright MCP across a public page and a local publishing fixture](2026-10-31-playwright-browser.md). The publishing portion is synthetic, not real social delivery.
 
 Ask an agent to connect an account on a chosen platform and retrieve one item the user is permitted to access. Let it discover a suitable interface rather than giving it a hidden target-specific script.

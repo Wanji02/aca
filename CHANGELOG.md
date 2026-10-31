@@ -1,5 +1,11 @@
 # Changelog
 
+## Fresh-context connection handoff - 2026-10-31
+
+- Record goal-led public API discovery by a new agent context and saved-connection reuse by a second context.
+- Independently check original response hashes, five ranked entries, refreshed values, and two distinct top-level comments.
+- Retain API/homepage counter differences and the same-model, no-control evaluation limits; no workflow or dependency changes.
+
 ## Generic browser case - 2026-10-31
 
 - Verify optional Playwright MCP public-page navigation and network inspection, plus a separate local form/upload/publish exercise.

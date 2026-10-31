@@ -67,7 +67,7 @@ There is no prescribed language, hardware stack, connector catalog, or connectio
 
 A self-contained, model- and host-independent workflow, plus [evaluation scenarios](examples/scenarios.md). It can be read as ordinary instructions or loaded as a skill. This describes the format and intended use; it does not claim successful execution by every model or integration with every target.
 
-Published [connection cases](examples/scenarios.md) record maintainer-led API and browser work, including failures and recovery. Independent-agent and comparative evaluations are next. See the [roadmap](ROADMAP.md).
+Published [connection cases](examples/scenarios.md) record API and browser work, including failures and recovery. A [fresh-context handoff](examples/2026-10-31-fresh-agent-handoff.md) also demonstrates discovery by one agent and saved-connection reuse by another. Cross-model and controlled comparisons remain next. See the [roadmap](ROADMAP.md).
 
 ## Contributing
 

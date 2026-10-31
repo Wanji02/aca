@@ -1,58 +1,42 @@
 # ACA design direction
 
-Read this before changing ACA's scope, packaging, or implementation. This is the project design brief, not extra instructions that every end-user conversation must load.
+Read this before changing scope, packaging, or implementation.
 
-## The product
+## Purpose
 
-**ACA: AI Connecting Anything** is a common workflow that helps the user's own AI connect network software, social platforms, and smart devices.
+**ACA: AI Connecting Anything** helps a user's existing AI connect apps, social platforms, and smart devices as ongoing channels and tools.
 
-The user supplies a goal. Their AI understands the environment, chooses tools, discovers a route, implements what is needed, checks the result, and retains useful connection knowledge. The implementation is determined by the target and the user's environment—not by a stack we require in advance.
+The product outcome is that the user can reach the same AI through an assigned account, request something involving its connected capabilities, and receive a response. A social account is a place to talk to the AI; a camera provides observations; a speaker provides a voice; files and devices support actions. The connection remains useful after the setup conversation ends.
 
-The essential deliverable is the self-contained [Connect workflow](SKILL.md). A user can give it to an AI as text, a file, or a skill. There is no preferred model or mandatory host.
+The account remains under the user's control. Assigning it to the AI means binding an authorized session and its incoming/outgoing interactions to that agent, not transferring ownership or granting every correspondent access to the user's computer.
 
-## Where responsibility belongs
+## One agent, many connections
 
-- **ACA:** useful guidance for discovering, establishing, verifying, reusing, and repairing connections.
-- **The user's AI:** task understanding, route selection, implementation, tool use, and decisions within the user's authorization.
-- **The existing environment:** model execution, available tools, credentials, network access, and any target-specific runtime the task needs.
+Keep the existing identity, conversation, memory, and decision maker. Incoming messages and device events reach that agent. It interprets the request and chooses tools, and the result returns to the appropriate conversation or endpoint.
 
-Keep the user's existing agent, identity, and memory. Apps and devices extend that agent's capabilities; they do not require a new ACA personality or a second conversational agent.
+The receiving path must be real: an event subscription, existing plugin, polling service, or another mechanism that can dispatch work to the host when the agent is idle. Merely opening an application or loading a model does not create that path. Reuse the host's mechanisms before adding infrastructure, and preserve account/source identity across delivery and tool execution.
 
-## What we will not build by default
+## What ACA provides
 
-- A collection of model-specific or host-specific installers as the main product.
-- A predefined adapter for every platform and device before a user can try a connection.
-- A mandatory hardware stack, language, model, memory system, or connection-record schema.
-- A second orchestration framework, plugin runtime, or MCP server merely to package a workflow.
-- More prompts, templates, dependencies, or tests whose main purpose is maintaining machinery we did not need.
+The self-contained [Connect workflow](SKILL.md) guides discovery, account/device association, ongoing reception, execution, response, and recovery. Users can supply it as text, a file, or a skill. Their AI chooses the tools, implementation, and local storage appropriate to the task.
 
-REA and other mature tools can help the AI investigate a target. They are options chosen for a task, not universal access mechanisms or required dependencies.
+ACA does not prescribe a model, connector catalog, language, memory database, device stack, record schema, or second agent runtime. REA, browser tools, APIs, and existing plugins are options. A local implementation for a real task does not automatically become a mandatory product component.
 
-## What remains important
+Method-first does not mean implementation-free: when the user's environment lacks a receiving or delivery path, the agent must establish one to fulfill an ongoing-interaction request. Adding more instructions cannot substitute for a running connection.
 
-Simplicity does not mean declaring success without evidence. Check the capability the user requested, retain enough knowledge to reuse it, and distinguish an unknown action outcome from a confirmed result. Keep credentials and unrelated private data out of shared examples. Let the AI choose how to implement these principles rather than mandating a reporting protocol.
+## Completion and maintenance
 
-Universal intent means the method is not tied to a vendor. It does not mean every model can execute tools or every target exposes every capability. Explain a concrete missing capability when it matters to a task; do not burden every interaction with generic disclaimers.
+Treat one-time tasks and ongoing channels differently. For ongoing use, check new input after setup, a reply from the same agent, later interactions, and the lifecycle the user requested. Check real effects for tool actions. Retain enough state to resume without duplicate processing, recover lost sessions, and stop when requested.
 
-## How we decide what to add
+Give the agent freedom to choose a route while preserving the user's actual authority and intended recipients. A new message from an unbound contact is conversation input, not authorization to export local files or operate devices.
 
-Before proposing code or structure, ask:
+## Public presentation
 
-1. Which observed connection problem does this solve?
-2. Can the user's AI already solve it with existing tools and the current method?
-3. Does it improve successful connection or reuse, or mostly add packaging and maintenance?
-4. Can the useful part remain optional and be explained more simply?
+Lead with the useful interaction, a quick start, how the method works, and what runs it. Keep implementation logs, raw evidence, and individual test reports in local development records. A selected demonstration can be added when it helps a user understand the product; publishing every test is not a milestone.
 
-An adapter created for a real user task is useful task output. It does not automatically become a mandatory ACA component. Add shared code only when actual cases show a recurring need that existing tools do not meet.
-
-## Validation direction
-
-Test real goals with the workflow, observe route discovery and outcomes, then test reuse and recovery. Keep experimental scripts and raw local evidence separate from the product. Publish concise, sanitized case reports, including failed attempts.
-
-Label synthetic tests, previously known integrations, fresh-agent evaluations, and real-device observations accurately. A maintainer successfully connecting something is a case study, not proof that the workflow caused the success. Claims of improvement require comparable runs with and without ACA; claims across models require actual runs with those models.
-
-Do not make adding hosts, passing framework tests, or growing an adapter catalog the milestone. The milestone is that the user's AI can achieve a useful connection with less repeated work.
+Describe what the workflow guides separately from what a particular deployment currently runs. Internally retain failures and distinguish live outcomes, simulations, human participation, and future work. Removing reports from the public tree does not erase their evidence or turn a supervised test into unattended operation.
 
 ## Decision history
 
-2026-10-31: The first package overemphasized Codex/Claude installation, a fixed JSON contract, and validation infrastructure. Following the user's correction, version 0.2.0 removed those parts and returned to one portable method. That machinery remains in Git history, not the default roadmap. Reintroducing it requires concrete evidence and an explicit design discussion; do not gradually rebuild it under a different name.
+- 2026-10-31, 0.2: removed host-specific installers, fixed schemas, and unnecessary framework machinery; returned to one portable method.
+- 2026-10-31, 0.3: clarified that accounts are ongoing interaction channels for the same agent. Prior read/send checks remain internal evidence. The next implementation focus is continuous reception, replies, and cross-tool requests, rather than accumulating connection demonstrations.

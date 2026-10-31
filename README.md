@@ -6,75 +6,67 @@
 
 **Connect your AI to anything online—from digital platforms to the physical world.**
 
-[Start connecting](#get-started) · [Read the workflow](SKILL.md) · [Design direction](DESIGN.md) · [Contribute](CONTRIBUTING.md)
+[Get started](#get-started) · [Connect workflow](SKILL.md) · [Design](DESIGN.md) · [Roadmap](ROADMAP.md)
 
 </div>
 
 ---
 
-## Your AI figures out the connection.
+## One AI. Wherever you reach it.
 
-Tell your AI what you want to connect. ACA gives it a common method to investigate the target, choose suitable tools, establish the connection, check the result, and retain what works.
+Give your AI an account to use. Message it from your phone. Ask it to send a file from your computer, check a camera, or adjust the lights. Continue the conversation through a speaker or another connected platform.
 
-Your AI chooses the implementation for your environment. Keep your own model, personality, memory, and tools. Connect a platform, a device, or both.
+ACA guides your AI through making those connections useful over time: receiving messages, understanding requests, acting through available tools, and bringing the result back to you. Your existing agent keeps its identity, conversation, and memory. Accounts and devices become its ways to hear, speak, and act.
 
 ```text
-Understand → Discover → Connect → Verify → Reuse
+Your message or device event
+            ↓
+       Your existing AI
+            ↓
+  Apps · Files · Platforms · Devices
+            ↓
+     A reply where you need it
 ```
 
 ## Get started
 
-Give your AI this request, replacing the target and goal:
+Give this request to your tool-enabled AI:
 
 ```text
-Read https://github.com/Wanji02/aca/blob/main/SKILL.md and use its workflow
-to connect my AI to [app, platform, or device] so it can [desired capability].
-Inspect my environment, choose and implement a suitable route, verify that it
-works, and save what you need to use the connection again.
+Read https://github.com/Wanji02/aca/blob/main/SKILL.md.
+Connect you to [platform/account or device] so I can [desired interaction].
+Use my existing agent and memory. Find a suitable connection, arrange ongoing
+message or event reception, and route my requests and your replies through it.
+Keep it usable while your host is running, and save how to resume it later.
 ```
 
-If your AI cannot open links, paste or attach [SKILL.md](SKILL.md). That single file contains the complete workflow. If your agent supports skills, it can also load that file using its own skill mechanism. No ACA installer, package manager, or model-specific setup is required.
+You can also paste or attach [SKILL.md](SKILL.md), or load it through your agent's skill mechanism. No ACA-specific installer or model is required.
 
-The AI needs tools capable of doing the task, such as a terminal, browser, API client, or access to the device's network. The workflow guides those tools; it does not grant missing access. Login or pairing may require your help.
+Your agent chooses the tools and sets up the receiving and execution path in its existing host. You complete account login or pairing when needed. Ongoing interaction needs that host and the connection to remain available; loading a workflow file alone does not start a listener.
 
-## What can you ask for?
+## What you can build
 
-- “Connect my AI to the messaging platform I use.”
-- “Let my AI see through my camera and speak through my speaker.”
-- “Connect my lights so my AI can control them.”
-- “Connect both my online accounts and my devices.”
-- “Restore the connection we set up last time.”
+- **A familiar place to talk.** Reach the same AI through an account you assign to it on QQ, Discord, Telegram, or another platform.
+- **Your computer within reach.** Ask from your phone for a particular file, let the AI find it, and receive it in the intended conversation.
+- **Conversation that reaches the room.** Ask about a camera view, adjust lighting, set an alarm, or speak through a connected device.
+- **Connections that stay useful.** Receive new requests after the setup conversation ends, resume after a restart, and recover when a session expires.
 
-These are goals to investigate, not a preverified compatibility list. Each target's interfaces determine which capabilities can actually be connected.
+These are the interaction goals. Your AI discovers and implements the route for the chosen environment.
 
 ## How ACA works
 
-| Step | Your AI decides and does |
-| --- | --- |
-| Understand | Identify your goal, the intended target, and what a working result means. |
-| Discover | Inspect the environment and find relevant interfaces, connectors, or tools. |
-| Connect | Reuse or build the smallest suitable connection. |
-| Verify | Check the actual requested outcome and resolve failures. |
-| Reuse | Keep useful connection knowledge and implementation artifacts, then recover or adapt them when needed. |
+**Discover → Connect → Receive → Act → Respond → Resume**
 
-An API, existing plugin, browser, or local protocol may be enough. When an undocumented interface needs investigation, your AI can use [REA](https://github.com/morluto/rea) or other suitable tools. REA is an optional discovery tool, not a required ACA dependency.
+The AI identifies the account or device, connects incoming events to its existing conversation, chooses the right tools for the request, and sends the actual result to the intended destination. It retains enough connection state to continue after interruption.
 
-For browser-based connections, an existing browser tool or [Playwright MCP](https://github.com/microsoft/playwright-mcp) can supply page interaction and network inspection. Our [browser case](examples/2026-10-31-playwright-browser.md) records a public website read and a separate local publishing exercise. Your AI chooses the tool; ACA does not require this one.
+Use an API, existing connector, browser, desktop tool, or local protocol when it fits. [Playwright MCP](https://github.com/microsoft/playwright-mcp) is one browser option; [REA](https://github.com/morluto/rea) can help investigate undocumented behavior. Neither is required.
 
-There is no prescribed language, hardware stack, connector catalog, or connection-record format. The reusable product is the method; target-specific implementation happens where the user needs it.
+ACA provides the method in [SKILL.md](SKILL.md). The agent implements the connection using its host and available tools. There is no mandatory connector catalog, second personality, memory database, or hardware stack.
 
-## What is available today?
+## Contribute
 
-A self-contained, model- and host-independent workflow, plus [evaluation scenarios](examples/scenarios.md). It can be read as ordinary instructions or loaded as a skill. This describes the format and intended use; it does not claim successful execution by every model or integration with every target.
-
-Published [connection cases](examples/scenarios.md) record API and browser work, including failures and recovery. A [fresh-context handoff](examples/2026-10-31-fresh-agent-handoff.md) also demonstrates discovery by one agent and saved-connection reuse by another. Cross-model and controlled comparisons remain next. See the [roadmap](ROADMAP.md).
-
-A [QQ case](examples/2026-10-31-qq-message-roundtrip.md) adds a real, supervised text-message round trip through an existing desktop client, with user-assisted login and recipient confirmation.
-
-## Contributing
-
-Share a useful method, a real connection case, or a failure that teaches us what to improve. Keep examples free of credentials, private conversations, and personal media. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Improve how an AI receives requests, connects capabilities, responds, or recovers. Prefer a useful general method over another required platform adapter. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-[MIT](LICENSE). External tools and connectors retain their own licenses.
+[MIT](LICENSE). External tools retain their own licenses.

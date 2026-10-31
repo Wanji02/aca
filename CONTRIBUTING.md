@@ -1,13 +1,11 @@
 # Contributing to ACA
 
-Read [the design direction](DESIGN.md) before proposing architecture, packaging, or scope changes. It records the method-first decision and the work ACA deliberately leaves to the user's AI.
+Read [the design direction](DESIGN.md) before changing scope or architecture.
 
-Help an AI establish useful connections with less repeated work. Contribute a clearer decision in the workflow, a reproducible connection case, or a failure that exposes a missing idea.
+Help a user's AI remain reachable through connected accounts and devices. Useful contributions improve discovery, ongoing reception, source identity, action delivery, responses, or recovery without requiring another agent or a platform-specific framework.
 
-Keep public content in English. Prefer guidance that transfers between environments. Platform-specific code can accompany a case when it helps reproduce the result; it is not a requirement for every ACA user.
+Keep public content in English and [SKILL.md](SKILL.md) usable on its own. Explain the real problem a change solves and why existing tools do not already solve it. Preserve attribution and licenses when reusing work.
 
-For a case, describe the goal, target, agent and available tools, chosen route, observed outcome, and what happened on reuse or recovery. Include enough detail to reproduce the useful part. Remove credentials, account sessions, personal identifiers, conversations, and private media. Preserve attribution and licenses for reused work.
+Validate the behavior affected by your change. Keep private evidence and routine test logs in local development records; share only the minimal sanitized reproduction needed to explain an issue. Do not include credentials, sessions, account identifiers, private conversations, or personal media.
 
-When editing the workflow, explain which real problem the change addresses. Check relative links and ensure [SKILL.md](SKILL.md) remains usable on its own. There is no required package installation or build step. Evaluate substantive behavioral changes through appropriate tasks; document checks alone do not establish connection quality.
-
-Use an issue to discuss a problem or a pull request to propose a change. Avoid adding a host-specific framework or mandatory record format without evidence that the common workflow needs it.
+Prefer a focused issue or pull request over a new installer, mandatory schema, or adapter catalog. There is no required ACA runtime or package installation.

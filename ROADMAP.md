@@ -1,26 +1,21 @@
 # Roadmap
 
-## Available
+## Current foundation
 
-- One self-contained Connect workflow in [SKILL.md](SKILL.md), readable directly by an AI or loadable as a skill.
-- English introduction, contribution guidance, and [evaluation scenarios](examples/scenarios.md).
-- No required runtime, model, host installer, programming language, or connection-record schema.
+ACA provides the self-contained [Connect workflow](SKILL.md) and [design direction](DESIGN.md). The workflow guides the user's AI; the actual receiving, execution, and delivery paths run in that user's host and environment.
 
-The [design direction](DESIGN.md) keeps these choices explicit. The [first case report](examples/2026-10-31-first-connection-case.md) records a real public API read and process reuse, a separate synthetic recovery exercise, and physical acceptance deferred because the device environment was unavailable. It is not an independent-agent or cross-model evaluation.
+## Next: stay reachable through an account
 
-The [Bluesky case](examples/2026-10-31-bluesky-public-feed.md) adds real public social-feed reads, cursor reuse across processes, identity mismatch handling, and recovery from an invalid cursor using preserved state. Authenticated social actions and comparative agent evaluations remain open.
+Connect a user-assigned account to the existing agent. New messages should reach it after setup ends, retain the right conversation and sender, and produce replies through the same account. Reuse existing host and connector capabilities before building anything new.
 
-## Next: demonstrate the method
+## Then: connect requests to actions
 
-The [QQ case](examples/2026-10-31-qq-message-roundtrip.md) adds a real supervised send/receive result with a designated contact and user-assisted QR login. Sustained operation, authenticated-session reuse, and uncertain-delivery recovery remain separate evaluations.
+Let the same agent handle a phone message that asks for a particular computer file, a camera observation, or a device action, and return the result to the intended conversation. Establish the caller's authority and the requested target through the existing host and user delegation.
 
-The [generic browser case](examples/2026-10-31-playwright-browser.md) records actual Playwright MCP public-page navigation and network inspection, plus a separate synthetic publishing flow with attachment upload, layout changes, and browser reopening. Real authenticated publishing remains untested; the tool is optional and adds no ACA runtime dependency.
+## Keep the connection usable
 
-The [fresh-context handoff case](examples/2026-10-31-fresh-agent-handoff.md) records one agent discovering a public Hacker News connection and another reusing its saved method for fresh reads. Both used the same configured model and host; no without-ACA control or fault-recovery test was performed.
+Resume after the agreed host restart, handle expired sessions, avoid replaying completed work, and support pause, stop, and account changes. Verify the behavior where it runs; keep detailed development evidence local.
 
-1. Give an agent a real network or device goal without a hidden, prewritten target adapter. Observe how it discovers and establishes a route.
-2. Ask it to reuse the result after an interruption. Retain the successful method and the failures that explain its limits.
-3. Repeat with different tool-enabled agents and targets. Within each environment, compare with and without ACA while keeping the model, tools, permissions, and task conditions the same.
-4. Improve the workflow from those results. Add reusable code only when real cases reveal a recurring need that existing tools do not already meet.
+## Keep ACA small
 
-Success means easier, working connections—not the number of bundled adapters, supported installation directories, or framework tests. Case reports must distinguish plans, simulated checks, and real outcomes. No universal compatibility result has been established.
+Improve the shared method from real use. Add reusable code only for a recurring gap that available tools do not solve. Do not make platform counts, mandatory adapters, host-specific installers, or public test reports the goal.

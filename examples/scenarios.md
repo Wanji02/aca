@@ -18,7 +18,7 @@ Verify the actual result. Distinguish interface availability, software acknowled
 
 Restart the adapter or disconnect the target, then ask the agent to reuse its saved connection. Check whether it diagnoses the specific interruption and recovers without rebuilding everything or duplicating pending actions.
 
-Change a relevant version or revoke access and check whether the saved record becomes stale instead of silently retaining `verified` status.
+Change a relevant version or revoke access and check whether the agent notices the saved connection needs rechecking, instead of treating an earlier success as current proof.
 
 ## Evidence to retain
 

@@ -6,91 +6,70 @@
 
 **Connect your AI to anything online—from digital platforms to the physical world.**
 
-[Get started](#get-started) · [Install the skill](docs/installation.md) · [The workflow](docs/connect-workflow.md) · [Contribute](CONTRIBUTING.md)
+[Start connecting](#get-started) · [Read the workflow](SKILL.md) · [Contribute](CONTRIBUTING.md)
 
 </div>
 
 ---
 
-## Your AI. Your connections.
+## Your AI figures out the connection.
 
-Tell your AI what you want to connect. ACA gives it a practical workflow to research the target, choose an integration route, build the connection, verify the result, and keep it working.
+Tell your AI what you want to connect. ACA gives it a common method to investigate the target, choose suitable tools, establish the connection, check the result, and retain what works.
 
-Keep your own agent, model, personality, and tools. Start with an app, a social platform, a smart device—or connect them together.
+Your AI chooses the implementation for your environment. Keep your own model, personality, memory, and tools. Connect a platform, a device, or both.
 
 ```text
-Understand → Discover → Connect → Verify → Reuse → Maintain
+Understand → Discover → Connect → Verify → Reuse
 ```
-
-## What can you ask for?
-
-- “Connect my AI to the social platform I use.”
-- “Let my AI see through my camera and speak through my speaker.”
-- “Connect my lights so my AI can control them.”
-- “Reuse this connection after I restart my computer.”
-
-These are starting goals for the workflow. The available functions come from the target's interfaces, the user's access, and the tools available to their agent.
-
-## How it works
-
-| Step | What your AI does |
-| --- | --- |
-| **Understand** | Turn your request into concrete capabilities and identify the intended account or device. |
-| **Discover** | Inspect the environment, official interfaces, existing connectors, and target behavior. |
-| **Connect** | Reuse an appropriate integration or create the smallest adapter needed for your environment. |
-| **Verify** | Check an actual result: a returned frame, a delivered message, a state change, or audible playback. |
-| **Reuse** | Save the working entry points, dependency versions, and evidence in a local connection record. |
-| **Maintain** | Check health, recover from interruptions, and revalidate after changes. |
-
-An existing API or connector may be enough. When an interface needs investigation, an agent can use tools such as [REA](https://github.com/morluto/rea) as part of discovery. ACA does not require a fixed hardware stack or a second agent to take over your conversations.
 
 ## Get started
 
-Install the portable `aca-connect` skill into an existing project, then describe a concrete target:
-
-```sh
-git clone https://github.com/Wanji02/aca.git
-cd aca
-node scripts/install-skill.mjs --host codex --project /path/to/your/workspace
-```
-
-Use `--host claude` for the Claude Code directory layout. Start a new host session in the chosen workspace and invoke `$aca-connect` in Codex or `/aca-connect` in Claude Code. See [installation and host verification](docs/installation.md) for manual copying, prerequisites, and the scope actually tested.
+Give your AI this request, replacing the target and goal:
 
 ```text
-Use aca-connect to connect my AI to [target].
-I want to be able to [capabilities].
-Inspect my environment, reuse suitable existing tools, implement the connection,
-and verify the actual result. Save a reusable local connection record.
+Read https://github.com/Wanji02/aca/blob/main/SKILL.md and use its workflow
+to connect my AI to [app, platform, or device] so it can [desired capability].
+Inspect my environment, choose and implement a suitable route, verify that it
+works, and save what you need to use the connection again.
 ```
 
-Your agent needs the tools relevant to the target: for example, web research, a terminal, an integration client, or access to a device on your network. Login and physical pairing may need your participation.
+If your AI cannot open links, paste or attach [SKILL.md](SKILL.md). That single file contains the complete workflow. If your agent supports skills, it can also load that file using its own skill mechanism. No ACA installer, package manager, or model-specific setup is required.
 
-You can also give your agent [the workflow](docs/connect-workflow.md) directly. The skill has no mandatory model server, hardware stack, or MCP dependency.
+The AI needs tools capable of doing the task, such as a terminal, browser, API client, or access to the device's network. The workflow guides those tools; it does not grant missing access. Login or pairing may require your help.
 
-Start with one capability. Expand a working connection instead of rebuilding it for every request.
+## What can you ask for?
 
-## In this repository
+- “Connect my AI to the messaging platform I use.”
+- “Let my AI see through my camera and speak through my speaker.”
+- “Connect my lights so my AI can control them.”
+- “Connect both my online accounts and my devices.”
+- “Restore the connection we set up last time.”
 
-- [Connect workflow](docs/connect-workflow.md): instructions your agent can follow.
-- [Portable skill](skills/aca-connect/SKILL.md): a short entry point with bundled references and a template.
-- [Installation](docs/installation.md): project-local setup, validation, and removal.
-- [Connection record guide](docs/connection-record.md): how to retain a reusable connection.
-- [Record schema](skills/aca-connect/references/connection.schema.json): versioned JSON Schema with an Ajv-based checker.
-- [Connection template](templates/connection.json): a starting record for your local environment.
-- [Evaluation scenarios](examples/scenarios.md): network and device exercises, including recovery.
-- [Roadmap](ROADMAP.md): what is included now and what comes next.
+These are goals to investigate, not a preverified compatibility list. Each target's interfaces determine which capabilities can actually be connected.
 
-This release provides a loadable skill, workflow, and connection-record checks. Target-specific adapters are created or reused in the user's environment; this repository does not yet ship a universal connector runtime or a verified platform/device compatibility catalog. See [validation results](docs/validation/m1.md) and [the changelog](CHANGELOG.md).
+## How ACA works
 
-## Built around connection
+| Step | Your AI decides and does |
+| --- | --- |
+| Understand | Identify your goal, the intended target, and what a working result means. |
+| Discover | Inspect the environment and find relevant interfaces, connectors, or tools. |
+| Connect | Reuse or build the smallest suitable connection. |
+| Verify | Check the actual requested outcome and resolve failures. |
+| Reuse | Keep useful connection knowledge and implementation artifacts, then recover or adapt them when needed. |
 
-ACA focuses on making connections discoverable, testable, and reusable. It leaves conversation, memory, voice selection, and decisions with your existing AI. Audio and video services can be added when the chosen devices and host support them.
+An API, existing plugin, browser, or local protocol may be enough. When an undocumented interface needs investigation, your AI can use [REA](https://github.com/morluto/rea) or other suitable tools. REA is an optional discovery tool, not a required ACA dependency.
 
-Connection records stay local by default. Share reproducible methods and sanitized examples, not account sessions, pairing secrets, personal conversations, or private media.
+There is no prescribed language, hardware stack, connector catalog, or connection-record format. The reusable product is the method; target-specific implementation happens where the user needs it.
+
+## What is available today?
+
+A self-contained, model- and host-independent workflow, plus [evaluation scenarios](examples/scenarios.md). It can be read as ordinary instructions or loaded as a skill. This describes the format and intended use; it does not claim successful execution by every model or integration with every target.
+
+The next step is to publish reproducible connection cases showing how different agents apply the same method, including failures and recovery. See the [roadmap](ROADMAP.md).
 
 ## Contributing
 
-Bring a connection method, a reproducible case, or a failure that improves the workflow. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Share a useful method, a real connection case, or a failure that teaches us what to improve. Keep examples free of credentials, private conversations, and personal media. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

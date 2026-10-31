@@ -1,22 +1,16 @@
 # Roadmap
 
-## Available in 0.1.0
+## Available
 
-- English project introduction.
-- A host-neutral Connect workflow.
-- A portable `aca-connect` skill and project-local installation helper.
-- Connection-record schema 1.0.0, templates, and Ajv-based checks.
-- Synthetic validation and installation tests; native Codex discovery checked.
-- Evaluation scenarios and contribution guidance.
+- One self-contained Connect workflow in [SKILL.md](SKILL.md), readable directly by an AI or loadable as a skill.
+- English introduction, contribution guidance, and [evaluation scenarios](examples/scenarios.md).
+- No required runtime, model, host installer, programming language, or connection-record schema.
 
-See [the M1 report](docs/validation/m1.md) for actual evidence and remaining host checks. Claude Code's install layout is tested; its runtime discovery and real-task behavior remain untested here.
+## Next: demonstrate the method
 
-## Next
+1. Give an agent a real network or device goal without a hidden, prewritten target adapter. Observe how it discovers and establishes a route.
+2. Ask it to reuse the result after an interruption. Retain the successful method and the failures that explain its limits.
+3. Repeat with different tool-enabled agents and targets. Within each environment, compare with and without ACA while keeping the model, tools, permissions, and task conditions the same.
+4. Improve the workflow from those results. Add reusable code only when real cases reveal a recurring need that existing tools do not already meet.
 
-1. Exercise the skill on controlled fixtures, then an authorized network target and real device, without hidden prewritten adapters.
-2. Compare with/without ACA under the same host, model, tools, permissions, and target conditions; publish sanitized reports including failed routes and recovery.
-3. Finish second-host discovery and compare real-task behavior across tool-enabled hosts separately from the within-host comparison.
-4. Turn repeated setup and verification steps into small reusable helpers.
-5. Add richer host packaging or an MCP frontend only where it improves the workflow.
-
-The direction is broad connection coverage with a small common workflow. Platform clients, audio models, device firmware, and personal memory systems are not mandatory core dependencies.
+Success means easier, working connections—not the number of bundled adapters, supported installation directories, or framework tests. Case reports must distinguish plans, simulated checks, and real outcomes. No universal compatibility result has been established.

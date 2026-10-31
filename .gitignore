@@ -1,0 +1,21 @@
+# Local connection state and credentials
+.env
+.env.*
+!.env.example
+connections/
+runtime/
+private/
+credentials/
+*.pem
+*.key
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Development artifacts
+node_modules/
+.venv/
+__pycache__/
+.DS_Store
+Thumbs.db

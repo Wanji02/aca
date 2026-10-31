@@ -2,6 +2,8 @@
 
 These are proposed exercises, not completed integrations or a compatibility list. Use the same Connect workflow across agent hosts and record what actually happens.
 
+Recorded work: [first connection case](2026-10-31-first-connection-case.md). Keep its limited observations separate from the broader exercises below.
+
 ## Network connection
 
 Ask an agent to connect an account on a chosen platform and retrieve one item the user is permitted to access. Let it discover a suitable interface rather than giving it a hidden target-specific script.

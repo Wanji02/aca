@@ -1,5 +1,11 @@
 # Changelog
 
+## Design and first case - 2026-10-31
+
+- Record the method-first design direction and explicit non-goals in DESIGN.md.
+- Publish a maintainer-led public API read/reuse case, a separately labeled local recovery exercise, and an unresolved read-only device probe. No model-comparison or universal-compatibility claim.
+- Keep experimental integration clients outside the ACA product; the workflow is unchanged.
+
 ## 0.2.0 - 2026-10-31
 
 - Center ACA on a single self-contained SKILL.md that an AI can read directly or load through its own skill mechanism.

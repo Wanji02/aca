@@ -6,7 +6,7 @@
 
 **Connect your AI to anything online—from digital platforms to the physical world.**
 
-[Start connecting](#get-started) · [Read the workflow](SKILL.md) · [Contribute](CONTRIBUTING.md)
+[Start connecting](#get-started) · [Read the workflow](SKILL.md) · [Design direction](DESIGN.md) · [Contribute](CONTRIBUTING.md)
 
 </div>
 

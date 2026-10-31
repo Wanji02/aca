@@ -6,6 +6,8 @@
 - English introduction, contribution guidance, and [evaluation scenarios](examples/scenarios.md).
 - No required runtime, model, host installer, programming language, or connection-record schema.
 
+The [design direction](DESIGN.md) keeps these choices explicit. The [first case report](examples/2026-10-31-first-connection-case.md) records a real public API read and process reuse, a separate synthetic recovery exercise, and an unresolved device probe. It is not an independent-agent or cross-model evaluation.
+
 ## Next: demonstrate the method
 
 1. Give an agent a real network or device goal without a hidden, prewritten target adapter. Observe how it discovers and establishes a route.

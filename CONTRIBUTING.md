@@ -1,5 +1,7 @@
 # Contributing to ACA
 
+Read [the design direction](DESIGN.md) before proposing architecture, packaging, or scope changes. It records the method-first decision and the work ACA deliberately leaves to the user's AI.
+
 Help an AI establish useful connections with less repeated work. Contribute a clearer decision in the workflow, a reproducible connection case, or a failure that exposes a missing idea.
 
 Keep public content in English. Prefer guidance that transfers between environments. Platform-specific code can accompany a case when it helps reproduce the result; it is not a requirement for every ACA user.

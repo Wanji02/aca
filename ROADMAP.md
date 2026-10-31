@@ -12,6 +12,8 @@ The [Bluesky case](examples/2026-10-31-bluesky-public-feed.md) adds real public 
 
 ## Next: demonstrate the method
 
+The [generic browser case](examples/2026-10-31-playwright-browser.md) records actual Playwright MCP public-page navigation and network inspection, plus a separate synthetic publishing flow with attachment upload, layout changes, and browser reopening. Real authenticated publishing remains untested; the tool is optional and adds no ACA runtime dependency.
+
 1. Give an agent a real network or device goal without a hidden, prewritten target adapter. Observe how it discovers and establishes a route.
 2. Ask it to reuse the result after an interruption. Retain the successful method and the failures that explain its limits.
 3. Repeat with different tool-enabled agents and targets. Within each environment, compare with and without ACA while keeping the model, tools, permissions, and task conditions the same.

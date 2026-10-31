@@ -1,5 +1,11 @@
 # Changelog
 
+## Generic browser case - 2026-10-31
+
+- Verify optional Playwright MCP public-page navigation and network inspection, plus a separate local form/upload/publish exercise.
+- Record changed-reference recovery, browser reopening, independent local ledger checks, and setup failures.
+- Keep the Connect workflow and design unchanged; add no required runtime or platform adapter.
+
 ## Public social read case - 2026-10-31
 
 - Record Bluesky public identity/profile/feed discovery, pagination reuse, and recovery using preserved valid state after an invalid cursor.

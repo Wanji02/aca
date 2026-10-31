@@ -59,13 +59,15 @@ These are goals to investigate, not a preverified compatibility list. Each targe
 
 An API, existing plugin, browser, or local protocol may be enough. When an undocumented interface needs investigation, your AI can use [REA](https://github.com/morluto/rea) or other suitable tools. REA is an optional discovery tool, not a required ACA dependency.
 
+For browser-based connections, an existing browser tool or [Playwright MCP](https://github.com/microsoft/playwright-mcp) can supply page interaction and network inspection. Our [browser case](examples/2026-10-31-playwright-browser.md) records a public website read and a separate local publishing exercise. Your AI chooses the tool; ACA does not require this one.
+
 There is no prescribed language, hardware stack, connector catalog, or connection-record format. The reusable product is the method; target-specific implementation happens where the user needs it.
 
 ## What is available today?
 
 A self-contained, model- and host-independent workflow, plus [evaluation scenarios](examples/scenarios.md). It can be read as ordinary instructions or loaded as a skill. This describes the format and intended use; it does not claim successful execution by every model or integration with every target.
 
-The next step is to publish reproducible connection cases showing how different agents apply the same method, including failures and recovery. See the [roadmap](ROADMAP.md).
+Published [connection cases](examples/scenarios.md) record maintainer-led API and browser work, including failures and recovery. Independent-agent and comparative evaluations are next. See the [roadmap](ROADMAP.md).
 
 ## Contributing
 

@@ -1,0 +1,21 @@
+{
+  "name": "aca-connect-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Development checks for ACA's portable Connect skill and connection records.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check-package.mjs",
+    "validate:record": "node scripts/validate-record.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "yaml": "2.9.1"
+  }
+}

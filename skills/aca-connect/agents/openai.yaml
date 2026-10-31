@@ -1,0 +1,4 @@
+interface:
+  display_name: "ACA Connect"
+  short_description: "Connect your AI to apps, platforms, and devices"
+  default_prompt: "Use $aca-connect to establish and verify the connection I describe, then save it for reuse."

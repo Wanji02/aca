@@ -1,0 +1,10 @@
+{
+  "record_version": "1.0.0",
+  "connection_id": "example-connection",
+  "target": {"kind": "device", "name": "Example target", "identity_ref": "local-target-reference"},
+  "environment": {"context_revision": "r1", "host": null, "adapter_version": null, "target_version": null},
+  "capabilities": [{"name": "example.read_state", "status": "needs_setup", "entry_point": null, "verification": null}],
+  "credential_refs": [],
+  "lifecycle": {"mode": "on_demand", "start": null, "health_check": null, "recover": null, "stop": null, "owned_resources": []},
+  "limitations": ["Template only; no connection has been tested."]
+}

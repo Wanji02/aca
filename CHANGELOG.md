@@ -1,5 +1,11 @@
 # Changelog
 
+## Real QQ message round trip - 2026-10-31
+
+- Record supervised native-client login, a single designated-contact send, recipient confirmation, and an observed incoming acknowledgment.
+- Separate agent route discovery from coordinator login recovery and user authentication; retain desktop-session limitations.
+- Publish no account data or screenshots, and add no product runtime dependency.
+
 ## Fresh-context connection handoff - 2026-10-31
 
 - Record goal-led public API discovery by a new agent context and saved-connection reuse by a second context.

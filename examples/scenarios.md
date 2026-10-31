@@ -8,6 +8,8 @@ Additional case: [Bluesky public feed and cursor reuse](2026-10-31-bluesky-publi
 
 ## Network connection
 
+Recorded authenticated case: [QQ text-message round trip](2026-10-31-qq-message-roundtrip.md), using the existing native client with user-assisted login and a designated contact. Receipt and an incoming reply were verified; unattended operation remains untested.
+
 Recorded fresh-context case: [Hacker News discovery and handoff](2026-10-31-fresh-agent-handoff.md). One agent discovered a route from the goal; a second reused its saved connection. This tests same-host context handoff, not cross-model compatibility.
 
 Recorded browser case: [Playwright MCP across a public page and a local publishing fixture](2026-10-31-playwright-browser.md). The publishing portion is synthetic, not real social delivery.

@@ -12,6 +12,8 @@ The [Bluesky case](examples/2026-10-31-bluesky-public-feed.md) adds real public 
 
 ## Next: demonstrate the method
 
+The [QQ case](examples/2026-10-31-qq-message-roundtrip.md) adds a real supervised send/receive result with a designated contact and user-assisted QR login. Sustained operation, authenticated-session reuse, and uncertain-delivery recovery remain separate evaluations.
+
 The [generic browser case](examples/2026-10-31-playwright-browser.md) records actual Playwright MCP public-page navigation and network inspection, plus a separate synthetic publishing flow with attachment upload, layout changes, and browser reopening. Real authenticated publishing remains untested; the tool is optional and adds no ACA runtime dependency.
 
 The [fresh-context handoff case](examples/2026-10-31-fresh-agent-handoff.md) records one agent discovering a public Hacker News connection and another reusing its saved method for fresh reads. Both used the same configured model and host; no without-ACA control or fault-recovery test was performed.

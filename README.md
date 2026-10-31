@@ -69,6 +69,8 @@ A self-contained, model- and host-independent workflow, plus [evaluation scenari
 
 Published [connection cases](examples/scenarios.md) record API and browser work, including failures and recovery. A [fresh-context handoff](examples/2026-10-31-fresh-agent-handoff.md) also demonstrates discovery by one agent and saved-connection reuse by another. Cross-model and controlled comparisons remain next. See the [roadmap](ROADMAP.md).
 
+A [QQ case](examples/2026-10-31-qq-message-roundtrip.md) adds a real, supervised text-message round trip through an existing desktop client, with user-assisted login and recipient confirmation.
+
 ## Contributing
 
 Share a useful method, a real connection case, or a failure that teaches us what to improve. Keep examples free of credentials, private conversations, and personal media. See [CONTRIBUTING.md](CONTRIBUTING.md).

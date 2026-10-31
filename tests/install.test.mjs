@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, readFile, writeFile, readdir, mkdir, rm, symlink } from 'node:fs/promises';
+import { mkdtemp, readFile, writeFile, readdir, mkdir, rm, symlink, realpath } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { installSkill } from '../scripts/install-skill.mjs';
@@ -17,7 +17,8 @@ for (const [host, folder] of [['codex', '.agents'], ['claude', '.claude']]) {
     const project = path.join(root, 'project with spaces');
     await mkdir(project);
     const result = await installSkill({ host, project });
-    assert.equal(result.destination, path.join(project, folder, 'skills/aca-connect'));
+    // Windows runners may expose TEMP through an 8.3 alias; compare canonical paths.
+    assert.equal(result.destination, path.join(await realpath(project), folder, 'skills/aca-connect'));
     for (const filename of ['SKILL.md', 'agents/openai.yaml', 'references/connection.schema.json', 'references/record-guide.md', 'assets/connection.template.json']) {
       assert.deepEqual(await readFile(path.join(result.destination, filename)), await readFile(new URL(`../skills/aca-connect/${filename}`, import.meta.url)));
     }
